@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:fluttery_player/bottom_controls.dart';
 import 'package:fluttery_player/songs.dart';
 import 'package:fluttery_player/theme.dart';
+import 'package:fluttery/gestures.dart';
 
 void main() => runApp(new MyApp());
 
@@ -53,7 +54,7 @@ class _MyHomePageState extends State<_MyHomePage> {
       body: new Column(
         children: <Widget>[
           // seek bar
-          new SeekBar(),
+          new Expanded(child: new RadialSeekBar()),
 
           // visualizer
           new Container(
@@ -69,41 +70,7 @@ class _MyHomePageState extends State<_MyHomePage> {
   }
 }
 
-class SeekBar extends StatelessWidget {
-  const SeekBar({
-    Key key,
-  }) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return new Expanded(
-        child: new Container(
-      child: new Center(
-        child: new Container(
-          width: 140.0,
-          height: 140.0,
-          child: new RadialSeekBar(
-            trackColor: const Color(0xFFDDDDDD),
-            progressPercentage: 0.25,
-            progressColor: accentColor,
-            thumbPosition: 0.25,
-            thumbColor: lightAccentColor,
-            inPadding: const EdgeInsets.all(10.0),
-            child: new ClipOval(
-              clipper: new CircleClipper(),
-              child: new Image.network(
-                demoPlaylist.songs[0].albumArtUrl,
-                fit: BoxFit.cover,
-              ),
-            ),
-          ),
-        ),
-      ),
-    ));
-  }
-}
-git
-class RadialSeekBar extends StatefulWidget {
+class RadialProgressBar extends StatefulWidget {
   final double trackWidth;
   final Color trackColor;
   final double progressWidth;
@@ -117,7 +84,7 @@ class RadialSeekBar extends StatefulWidget {
 
   final Widget child;
 
-  RadialSeekBar(
+  RadialProgressBar(
       {this.trackWidth = 3.0,
       this.trackColor = Colors.grey,
       this.progressWidth = 5.0,
@@ -131,10 +98,10 @@ class RadialSeekBar extends StatefulWidget {
       this.child});
 
   @override
-  _RadialSeekBarState createState() => _RadialSeekBarState();
+  _RadialProgressBarState createState() => _RadialProgressBarState();
 }
 
-class _RadialSeekBarState extends State<RadialSeekBar> {
+class _RadialProgressBarState extends State<RadialProgressBar> {
   EdgeInsets _insetsForPainter() {
     /*
     * Make room for painted track, progress, and thumb. We divide by 2.0 because
@@ -173,14 +140,14 @@ class _RadialSeekBarState extends State<RadialSeekBar> {
 
 class RadiusSeekBarPainter extends CustomPainter {
   final double trackWidth;
-  final Color trackColor;
+  Color trackColor;
   final Paint trackPaint;
   final double progressWidth;
-  final Color progressColor;
+  Color progressColor;
   final double progressPercentage;
   final Paint progressPaint;
   final double thumbSize;
-  final Color thumbColor;
+  Color thumbColor;
   final double thumbPosition;
   final Paint thumbPaint;
 
@@ -236,6 +203,92 @@ class RadiusSeekBarPainter extends CustomPainter {
   @override
   bool shouldRepaint(CustomPainter oldDelegate) {
     return true;
+  }
+}
+
+class RadialSeekBar extends StatefulWidget {
+  final double seekPercent;
+
+  RadialSeekBar({this.seekPercent=0.0});
+
+  @override
+  _RadialSeekBarState createState() => _RadialSeekBarState();
+}
+
+class _RadialSeekBarState extends State<RadialSeekBar> {
+  double _seekPercent = 0.0;
+  PolarCoord _startDragCoord;
+  double _startDragPercent;
+  double _currentDragPercent;
+
+
+  @override
+  void initState() {
+    super.initState();
+    _seekPercent=widget.seekPercent;
+  }
+
+  @override
+  void didUpdateWidget(RadialSeekBar oldWidget) {
+    super.didUpdateWidget(oldWidget);
+    _seekPercent=widget.seekPercent;
+  }
+
+  void _onRadialDragStart(PolarCoord coord) {
+    _startDragCoord = coord;
+    _startDragPercent = _seekPercent;
+  }
+
+  void _onRadialDragUpdate(PolarCoord coord) {
+    final dragAngle = coord.angle - _startDragCoord.angle;
+    final dragPercent = dragAngle / (2 * pi);
+
+    setState(
+        () => _currentDragPercent = (_startDragPercent + dragPercent) % 1.0);
+  }
+
+  void _onRadialDragEnd() {
+    setState(() {
+      _seekPercent = _currentDragPercent;
+      _currentDragPercent = null;
+      _startDragCoord = null;
+      _startDragPercent = 0.0;
+    });
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return new RadialDragGestureDetector(
+      onRadialDragStart: _onRadialDragStart,
+      onRadialDragUpdate: _onRadialDragUpdate,
+      onRadialDragEnd: _onRadialDragEnd,
+      child: new Container(
+        width: double.infinity,
+        height: double.infinity,
+        color: Colors.transparent,
+        child: new Center(
+          child: new Container(
+            width: 140.0,
+            height: 140.0,
+            child: new RadialProgressBar(
+              trackColor: const Color(0xFFDDDDDD),
+              progressPercentage: _currentDragPercent ?? _seekPercent,
+              progressColor: accentColor,
+              thumbPosition: _currentDragPercent ?? _seekPercent,
+              thumbColor: lightAccentColor,
+              inPadding: const EdgeInsets.all(10.0),
+              child: new ClipOval(
+                clipper: new CircleClipper(),
+                child: new Image.network(
+                  demoPlaylist.songs[0].albumArtUrl,
+                  fit: BoxFit.cover,
+                ),
+              ),
+            ),
+          ),
+        ),
+      ),
+    );
   }
 }
 
