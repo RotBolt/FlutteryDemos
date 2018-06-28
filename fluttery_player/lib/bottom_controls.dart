@@ -47,6 +47,8 @@ class TitleSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+
+    // AudioPlayListComponent from fluttery_audio
     return new AudioPlaylistComponent(
       playlistBuilder: (BuildContext context, Playlist playlist, Widget child) {
         String songTitle = demoPlaylist.songs[playlist.activeIndex].songTitle;
@@ -83,6 +85,7 @@ class PlayPauseButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    // AudioComponent from fluttery_audio
     return new AudioComponent(
       updateMe: [WatchableAudioProperties.audioPlayerState],
       playerBuilder: (BuildContext context, AudioPlayer player, Widget child) {
@@ -124,6 +127,8 @@ class PreviousButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+
+    // AudioPlayListComponent from fluttery_audio
     return new AudioPlaylistComponent(
       playlistBuilder: (BuildContext context, Playlist playlist, Widget child) {
         return new IconButton(
@@ -148,6 +153,7 @@ class NextButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    // AudioPlayListComponent from fluttery_audio
     return AudioPlaylistComponent(
       playlistBuilder: (BuildContext context, Playlist playlist, Widget child) {
         return new IconButton(
