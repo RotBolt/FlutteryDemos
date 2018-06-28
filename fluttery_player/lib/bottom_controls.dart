@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'theme.dart';
+import 'songs.dart';
 import 'package:fluttery_audio/fluttery_audio.dart';
 
 class BottomControls extends StatelessWidget {
@@ -14,31 +15,20 @@ class BottomControls extends StatelessWidget {
       color: accentColor,
       child: new Material(
         shadowColor: const Color(0x44000000),
-
         color: accentColor,
-
         child: Padding(
           padding: const EdgeInsets.only(top: 40.0, bottom: 40.0),
           child: new Column(
             children: <Widget>[
-
               new TitleSection(),
-
               Padding(
-
-                padding: const EdgeInsets.only(top: 40.0,bottom: 20.0),
+                padding: const EdgeInsets.only(top: 40.0, bottom: 20.0),
                 child: new Row(
-
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-
                   children: <Widget>[
-
                     new PreviousButton(),
-
                     new PlayPauseButton(),
-
                     new NextButton()
-
                   ],
                 ),
               )
@@ -57,23 +47,31 @@ class TitleSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return new RichText(
-      text: new TextSpan(text: '', children: [
-        new TextSpan(
-            text: 'Song title\n',
-            style: new TextStyle(
-                fontSize: 14.0,
-                fontWeight: FontWeight.bold,
-                letterSpacing: 4.0,
-                height: 1.5,
-                color: Colors.white)),
-        new TextSpan(
-            text: 'Artist Name',
-            style: new TextStyle(
-                color: Colors.white.withOpacity(0.75),
-                letterSpacing: 3.0,
-                height: 1.5))
-      ]),
+    return new AudioPlaylistComponent(
+      playlistBuilder: (BuildContext context, Playlist playlist, Widget child) {
+        String songTitle = demoPlaylist.songs[playlist.activeIndex].songTitle;
+        String artistName = demoPlaylist.songs[playlist.activeIndex].artist;
+
+        return new RichText(
+          text: new TextSpan(text: '', children: [
+            new TextSpan(
+                text: '$songTitle\n',
+                style: new TextStyle(
+                    fontSize: 14.0,
+                    fontWeight: FontWeight.bold,
+                    letterSpacing: 4.0,
+                    height: 1.5,
+                    color: Colors.white)),
+            new TextSpan(
+                text: '$artistName',
+                style: new TextStyle(
+                    color: Colors.white.withOpacity(0.75),
+                    letterSpacing: 3.0,
+                    height: 1.5))
+          ]),
+          textAlign: TextAlign.center,
+        );
+      },
     );
   }
 }
@@ -85,27 +83,22 @@ class PlayPauseButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-
-
-    return new  AudioComponent(
-      updateMe: [
-        WatchableAudioProperties.audioPlayerState
-      ],
-      playerBuilder: (BuildContext context,AudioPlayer player,Widget child){
+    return new AudioComponent(
+      updateMe: [WatchableAudioProperties.audioPlayerState],
+      playerBuilder: (BuildContext context, AudioPlayer player, Widget child) {
         IconData icon = Icons.music_note;
         Color buttonColor = lightAccentColor;
         Function onPressed;
 
-        if(player.state == AudioPlayerState.playing){
+        if (player.state == AudioPlayerState.playing) {
           icon = Icons.pause;
-          onPressed=player.pause;
-          buttonColor=Colors.white;
-        }
-        else if(player.state==AudioPlayerState.paused
-            || player.state == AudioPlayerState.completed ){
-          icon= Icons.play_arrow;
-          onPressed=player.play;
-          buttonColor=Colors.white;
+          onPressed = player.pause;
+          buttonColor = Colors.white;
+        } else if (player.state == AudioPlayerState.paused ||
+            player.state == AudioPlayerState.completed) {
+          icon = Icons.play_arrow;
+          onPressed = player.play;
+          buttonColor = Colors.white;
         }
         return new RawMaterialButton(
             shape: new CircleBorder(),
@@ -116,11 +109,9 @@ class PlayPauseButton extends StatelessWidget {
             highlightElevation: 0.5,
             child: new Padding(
               padding: EdgeInsets.all(8.0),
-              child: new Icon(icon,
-                  color: darkAccentColor, size: 35.0),
+              child: new Icon(icon, color: darkAccentColor, size: 35.0),
             ),
-            onPressed: onPressed
-        );
+            onPressed: onPressed);
       },
     );
   }
@@ -133,16 +124,18 @@ class PreviousButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return new IconButton(
-      splashColor: lightAccentColor,
-      highlightColor: Colors.transparent,
-      icon: new Icon(
-        Icons.skip_previous,
-        color: Colors.white,
-        size: 35.0,
-      ),
-      onPressed: () {
-        //TODO
+    return new AudioPlaylistComponent(
+      playlistBuilder: (BuildContext context, Playlist playlist, Widget child) {
+        return new IconButton(
+          splashColor: lightAccentColor,
+          highlightColor: Colors.transparent,
+          icon: new Icon(
+            Icons.skip_previous,
+            color: Colors.white,
+            size: 35.0,
+          ),
+          onPressed: playlist.previous,
+        );
       },
     );
   }
@@ -155,16 +148,18 @@ class NextButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return new IconButton(
-      splashColor: lightAccentColor,
-      highlightColor: Colors.transparent,
-      icon: new Icon(
-        Icons.skip_next,
-        color: Colors.white,
-        size: 35.0,
-      ),
-      onPressed: () {
-        //TODO
+    return AudioPlaylistComponent(
+      playlistBuilder: (BuildContext context, Playlist playlist, Widget child) {
+        return new IconButton(
+          splashColor: lightAccentColor,
+          highlightColor: Colors.transparent,
+          icon: new Icon(
+            Icons.skip_next,
+            color: Colors.white,
+            size: 35.0,
+          ),
+          onPressed: playlist.next,
+        );
       },
     );
   }

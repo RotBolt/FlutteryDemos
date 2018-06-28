@@ -28,13 +28,12 @@ class _MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<_MyHomePage> {
-
-  double _seekPercent;
-
   @override
   Widget build(BuildContext context) {
-    return Audio(
-      audioUrl: demoPlaylist.songs[0].audioUrl,
+    return AudioPlaylist(
+      playlist: demoPlaylist.songs.map((DemoSong song) {
+        return song.audioUrl;
+      }).toList(growable: false),
       playbackState: PlaybackState.paused,
       child: new Scaffold(
         appBar: new AppBar(
@@ -61,35 +60,14 @@ class _MyHomePageState extends State<_MyHomePage> {
         body: new Column(
           children: <Widget>[
             // seek bar
-            new Expanded(
-                child: AudioComponent(
-                  updateMe: [
-                    WatchableAudioProperties.audioPlayhead,
-                    WatchableAudioProperties.audioSeeking
-                  ],
-                  playerBuilder: (BuildContext context,AudioPlayer player,Widget child){
-                      double playBackProgress=0.0;
-
-                      if(player.audioLength!=null && player.position!=null){
-                        playBackProgress=player.position.inMilliseconds/player.audioLength.inMilliseconds;
-                      }
-
-
-                      _seekPercent = player.isSeeking?_seekPercent:null;
-
-                      return new RadialSeekBar(
-                        progress: playBackProgress,
-                        seekPercent: _seekPercent,
-                        onSeekRequested: (double seekPercent){
-                          setState(() => _seekPercent=seekPercent);
-                          final seekInMillis = (player.audioLength.inMilliseconds*seekPercent).round();
-
-                          player.seek(new Duration(milliseconds: seekInMillis));
-                        },
-                      );
-                  },
-                )
-            ),
+            new Expanded(child: new AudioPlaylistComponent(
+              playlistBuilder:
+                  (BuildContext context, Playlist playlist, Widget child) {
+                String albumArtUrl =
+                    demoPlaylist.songs[playlist.activeIndex].albumArtUrl;
+                return new AudioRadialSeekBar(albumArtUrl: albumArtUrl);
+              },
+            )),
 
             // visualizer
             new Container(
@@ -247,12 +225,10 @@ class RadialSeekBar extends StatefulWidget {
   final double seekPercent;
   final double progress;
   final Function(double) onSeekRequested;
+  final Widget child;
 
-  RadialSeekBar({
-    this.progress=0.0,
-    this.seekPercent=0.0,
-    this.onSeekRequested
-  });
+  RadialSeekBar(
+      {this.progress = 0.0, this.seekPercent = 0.0, this.onSeekRequested,this.child});
 
   @override
   _RadialSeekBarState createState() => _RadialSeekBarState();
@@ -264,17 +240,16 @@ class _RadialSeekBarState extends State<RadialSeekBar> {
   double _startDragPercent;
   double _currentDragPercent;
 
-
   @override
   void initState() {
     super.initState();
-    _progress=widget.progress;
+    _progress = widget.progress;
   }
 
   @override
   void didUpdateWidget(RadialSeekBar oldWidget) {
     super.didUpdateWidget(oldWidget);
-    _progress=widget.progress;
+    _progress = widget.progress;
   }
 
   void _onRadialDragStart(PolarCoord coord) {
@@ -291,8 +266,7 @@ class _RadialSeekBarState extends State<RadialSeekBar> {
   }
 
   void _onRadialDragEnd() {
-
-    if(widget.onSeekRequested!=null){
+    if (widget.onSeekRequested != null) {
       widget.onSeekRequested(_currentDragPercent);
     }
     setState(() {
@@ -304,13 +278,13 @@ class _RadialSeekBarState extends State<RadialSeekBar> {
 
   @override
   Widget build(BuildContext context) {
-    double thumbPosition= _progress;
+    double thumbPosition = _progress;
 
     // user is dragging
-    if(_currentDragPercent!=null){
-      thumbPosition=_currentDragPercent;
-    }else if(widget.seekPercent!=null){
-      thumbPosition=widget.seekPercent;
+    if (_currentDragPercent != null) {
+      thumbPosition = _currentDragPercent;
+    } else if (widget.seekPercent != null) {
+      thumbPosition = widget.seekPercent;
     }
     return new RadialDragGestureDetector(
       onRadialDragStart: _onRadialDragStart,
@@ -333,15 +307,64 @@ class _RadialSeekBarState extends State<RadialSeekBar> {
               inPadding: const EdgeInsets.all(10.0),
               child: new ClipOval(
                 clipper: new CircleClipper(),
-                child: new Image.network(
-                  demoPlaylist.songs[0].albumArtUrl,
-                  fit: BoxFit.cover,
-                ),
+                child: widget.child,
               ),
             ),
           ),
         ),
       ),
+    );
+  }
+}
+
+class AudioRadialSeekBar extends StatefulWidget {
+  final String albumArtUrl;
+
+  AudioRadialSeekBar({this.albumArtUrl});
+
+  @override
+  _AudioRadialSeekBarState createState() => _AudioRadialSeekBarState();
+}
+
+class _AudioRadialSeekBarState extends State<AudioRadialSeekBar> {
+  double _seekPercent;
+
+  @override
+  Widget build(BuildContext context) {
+    return new AudioComponent(
+      updateMe: [
+        WatchableAudioProperties.audioPlayhead,
+        WatchableAudioProperties.audioSeeking
+      ],
+      playerBuilder: (BuildContext context, AudioPlayer player, Widget child) {
+        double playBackProgress = 0.0;
+
+        if (player.audioLength != null && player.position != null) {
+          playBackProgress = player.position.inMilliseconds /
+              player.audioLength.inMilliseconds;
+        }
+
+        _seekPercent = player.isSeeking ? _seekPercent : null;
+
+        return new RadialSeekBar(
+          progress: playBackProgress,
+          seekPercent: _seekPercent,
+          onSeekRequested: (double seekPercent) {
+            setState(() => _seekPercent = seekPercent);
+            final seekInMillis =
+                (player.audioLength.inMilliseconds * seekPercent).round();
+
+            player.seek(new Duration(milliseconds: seekInMillis));
+            },
+          child: new Container(
+            color: accentColor,
+            child: new Image.network(
+              widget.albumArtUrl,
+              fit: BoxFit.cover,
+            ),
+          )
+        );
+      },
     );
   }
 }
