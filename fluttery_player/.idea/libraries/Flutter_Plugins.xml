@@ -1,6 +1,8 @@
 <component name="libraryTable">
   <library name="Flutter Plugins" type="FlutterPluginsLibraryType">
-    <CLASSES />
+    <CLASSES>
+      <root url="file://$USER_HOME$/flutter_sdk/.pub-cache/hosted/pub.dartlang.org/fluttery_audio-0.0.3" />
+    </CLASSES>
     <JAVADOC />
     <SOURCES />
   </library>

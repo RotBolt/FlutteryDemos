@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'theme.dart';
+import 'package:fluttery_audio/fluttery_audio.dart';
 
 class BottomControls extends StatelessWidget {
   const BottomControls({
@@ -84,21 +85,44 @@ class PlayPauseButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return new RawMaterialButton(
-        shape: new CircleBorder(),
-        fillColor: Colors.white,
-        splashColor: lightAccentColor,
-        highlightColor: lightAccentColor.withOpacity(0.5),
-        elevation: 10.0,
-        highlightElevation: 0.5,
-        child: new Padding(
-          padding: EdgeInsets.all(8.0),
-          child: new Icon(Icons.play_arrow,
-              color: darkAccentColor, size: 35.0),
-        ),
-        onPressed: () {
-          //TODO
-        });
+
+
+    return new  AudioComponent(
+      updateMe: [
+        WatchableAudioProperties.audioPlayerState
+      ],
+      playerBuilder: (BuildContext context,AudioPlayer player,Widget child){
+        IconData icon = Icons.music_note;
+        Color buttonColor = lightAccentColor;
+        Function onPressed;
+
+        if(player.state == AudioPlayerState.playing){
+          icon = Icons.pause;
+          onPressed=player.pause;
+          buttonColor=Colors.white;
+        }
+        else if(player.state==AudioPlayerState.paused
+            || player.state == AudioPlayerState.completed ){
+          icon= Icons.play_arrow;
+          onPressed=player.play;
+          buttonColor=Colors.white;
+        }
+        return new RawMaterialButton(
+            shape: new CircleBorder(),
+            fillColor: buttonColor,
+            splashColor: lightAccentColor,
+            highlightColor: lightAccentColor.withOpacity(0.5),
+            elevation: 10.0,
+            highlightElevation: 0.5,
+            child: new Padding(
+              padding: EdgeInsets.all(8.0),
+              child: new Icon(icon,
+                  color: darkAccentColor, size: 35.0),
+            ),
+            onPressed: onPressed
+        );
+      },
+    );
   }
 }
 
