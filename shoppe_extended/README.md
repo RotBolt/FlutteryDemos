@@ -1,6 +1,10 @@
 # shoppe_extended
 
-A new Flutter project.
+A Sample Shopping app demo with flutter love.
+
+### Home Screen
+
+![shoppe](https://user-images.githubusercontent.com/24780524/42126463-d62c115c-7ca6-11e8-831b-11e9d3520f00.png)
 
 ## Getting Started
 
