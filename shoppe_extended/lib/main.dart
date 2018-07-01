@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:shoppe_extended/item_details.dart';
 import 'Product.dart';
 
 void main()=> runApp(HomePage());
@@ -113,18 +114,33 @@ class ShoppingItem extends StatelessWidget {
   ShoppingItem({this.product});
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.all(8.0),
-      child: Stack(
-        fit: StackFit.expand,
-        children: <Widget>[
-          imageItem(product.imageUrl),
-          nameItem(product.name),
-          ratingItem(product.rating),
-        ],
+    return InkWell(
+      child: Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: Stack(
+          fit: StackFit.expand,
+          children: <Widget>[
+            imageItem(product.imageUrl),
+            nameItem(product.name),
+            ratingItem(product.rating),
+          ],
+        ),
       ),
+      onTap:(){
+        Navigator.of(context).push(
+          MaterialPageRoute(builder: (BuildContext context){
+            return ShoppingItemDetails(
+              itemName: product.name,
+              itemUrl: product.imageUrl,
+              itemRating: product.rating,
+            );
+          })
+        );
+      }
     );
   }
+
+
 
   Widget imageItem(String url){
     return Container(
