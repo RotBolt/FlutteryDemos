@@ -25,9 +25,14 @@ class ShoppingItemDetails extends StatelessWidget{
             ),
           ),
           centerTitle: true,
-          leading: Icon(
-            Icons.arrow_back,
-            color: Colors.white,
+          leading: IconButton(
+            icon: Icon(
+              Icons.arrow_back,
+              color: Colors.white,
+            ),
+            onPressed: (){
+              Navigator.pop(context);
+            },
           ),
           backgroundColor: Colors.redAccent,
         ),
@@ -48,7 +53,6 @@ class ShoppingItemDetails extends StatelessWidget{
                     Icons.share,
                   color:  Colors.white,
                 ),
-                backgroundColor: Colors.redAccent,
                 mini: true,
               ),
             ),
@@ -61,7 +65,7 @@ class ShoppingItemDetails extends StatelessWidget{
                     Icons.shopping_cart,
                     color:  Colors.white,
                   ),
-                  backgroundColor: Colors.redAccent,
+
                 ),
            ),
 
