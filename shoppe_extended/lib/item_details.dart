@@ -48,24 +48,29 @@ class ShoppingItemDetails extends StatelessWidget{
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: FloatingActionButton(
-                heroTag: 1,
+                heroTag: null,
                 child: Icon(
                     Icons.share,
                   color:  Colors.white,
                 ),
                 mini: true,
+                onPressed: (){
+
+                },
               ),
             ),
 
            Container(
              margin: EdgeInsets.only(bottom: 8.0),
              child: FloatingActionButton(
-               heroTag: 0,
+               heroTag: null,
                   child: Icon(
                     Icons.shopping_cart,
                     color:  Colors.white,
                   ),
+                onPressed: (){
 
+                },
                 ),
            ),
 
