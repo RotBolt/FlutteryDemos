@@ -8,6 +8,7 @@ void main() {
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    
     return new MaterialApp(
       home: new LakeView(),
     );
@@ -88,7 +89,7 @@ class LakeView extends StatelessWidget {
       appBar: new AppBar(
         title: new Text('Top Lakes'),
       ),
-      body: new ListView(
+      body: new ListView (
         children: <Widget>[
           new Image.asset(
             'images/lake.jpg',

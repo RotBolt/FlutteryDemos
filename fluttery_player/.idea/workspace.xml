@@ -6,13 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="aa5bd368-2efb-4adf-a028-6efa3f66edbb" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/src/main/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/src/main/kotlin/com/example/flutteryplayer/MainActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/src/main/kotlin/com/example/flutteryplayer/MainActivity.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/android/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fluttery_player_android.iml" beforeDir="false" afterPath="$PROJECT_DIR$/fluttery_player_android.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/bottom_controls.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/bottom_controls.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/main.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lake_app/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../lake_app/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lake_app/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../lake_app/lib/main.dart" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -27,8 +22,8 @@
       <file leaf-file-name="main.dart" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/lib/main.dart">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="129">
-              <caret line="118" column="3" lean-forward="true" selection-start-line="118" selection-start-column="3" selection-end-line="118" selection-end-column="3" />
+            <state relative-caret-position="2106">
+              <caret line="117" column="4" selection-start-line="117" selection-start-column="4" selection-end-line="117" selection-end-column="4" />
               <folding>
                 <element signature="e#0#19#0" expanded="true" />
               </folding>
@@ -39,7 +34,7 @@
       <file leaf-file-name="build.gradle" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/android/app/build.gradle">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="921">
+            <state relative-caret-position="954">
               <caret line="53" column="64" selection-start-line="53" selection-start-column="64" selection-end-line="53" selection-end-column="64" />
             </state>
           </provider>
@@ -75,7 +70,7 @@
       <file leaf-file-name="geometry.dart" pinned="false" current-in-tab="false">
         <entry file="file://$USER_HOME$/flutter_sdk/bin/cache/pkg/sky_engine/lib/ui/geometry.dart">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="575">
+            <state relative-caret-position="2088">
               <caret line="118" column="6" selection-start-line="118" selection-start-column="6" selection-end-line="118" selection-end-column="6" />
             </state>
           </provider>
@@ -84,7 +79,7 @@
       <file leaf-file-name="iterable.dart" pinned="false" current-in-tab="false">
         <entry file="file://$USER_HOME$/flutter_sdk/bin/cache/pkg/sky_engine/lib/core/iterable.dart">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="157">
+            <state relative-caret-position="7164">
               <caret line="400" column="23" selection-start-line="400" selection-start-column="23" selection-end-line="400" selection-end-column="23" />
             </state>
           </provider>
@@ -163,11 +158,11 @@
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
-  <component name="ProjectFrameBounds" extendedState="4">
-    <option name="x" value="73" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="496" />
     <option name="y" value="27" />
-    <option name="width" value="1272" />
-    <option name="height" value="1053" />
+    <option name="width" value="968" />
+    <option name="height" value="789" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -175,6 +170,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -260,9 +256,8 @@
         </subPane>
       </pane>
       <pane id="AndroidView" />
-      <pane id="Course" />
-      <pane id="Scope" />
       <pane id="PackagesPane" />
+      <pane id="Course" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -356,15 +351,16 @@
       <workItem from="1530186436402" duration="48000" />
       <workItem from="1530186509414" duration="122000" />
       <workItem from="1530186732409" duration="255000" />
-      <workItem from="1530187008665" duration="18509000" />
+      <workItem from="1530187008665" duration="18846000" />
+      <workItem from="1530213419621" duration="19000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="43812000" />
+    <option name="totallyTimeSpent" value="44168000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="73" y="27" width="1272" height="1053" extended-state="4" />
+    <frame x="73" y="27" width="1847" height="1053" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
@@ -385,18 +381,18 @@
       <window_info anchor="right" id="Device File Explorer" order="7" sideWeight="0.5045872" side_tool="true" weight="0.25260806" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Messages" order="8" weight="0.32897604" />
       <window_info anchor="right" id="Palette&#9;" order="8" />
       <window_info id="Image Layers" order="5" />
       <window_info anchor="right" id="Capture Analysis" order="9" />
       <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.456427" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.456427" />
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.3267974" />
       <window_info id="Captures" order="7" />
-      <window_info content_ui="combo" id="Project" order="6" sideWeight="0.49525616" visible="true" weight="0.21451876" />
+      <window_info active="true" content_ui="combo" id="Project" order="6" sideWeight="0.49525616" visible="true" weight="0.14602998" />
       <window_info anchor="right" id="Theme Preview" order="10" />
       <window_info id="Favorites" order="8" side_tool="true" />
-      <window_info anchor="right" id="Flutter Inspector" order="11" sideWeight="0.49541286" visible="true" weight="0.10685155" />
+      <window_info anchor="right" id="Flutter Inspector" order="11" sideWeight="0.49541286" visible="true" weight="0.26152137" />
+      <window_info anchor="bottom" id="Messages" order="8" weight="0.32897604" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -717,7 +713,7 @@
     </entry>
     <entry file="file://$USER_HOME$/flutter_sdk/bin/cache/pkg/sky_engine/lib/core/iterable.dart">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="157">
+        <state relative-caret-position="7164">
           <caret line="400" column="23" selection-start-line="400" selection-start-column="23" selection-end-line="400" selection-end-column="23" />
         </state>
       </provider>
@@ -741,7 +737,7 @@
     </entry>
     <entry file="file://$USER_HOME$/flutter_sdk/bin/cache/pkg/sky_engine/lib/ui/geometry.dart">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="575">
+        <state relative-caret-position="2088">
           <caret line="118" column="6" selection-start-line="118" selection-start-column="6" selection-end-line="118" selection-end-column="6" />
         </state>
       </provider>
@@ -762,7 +758,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/android/app/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="921">
+        <state relative-caret-position="954">
           <caret line="53" column="64" selection-start-line="53" selection-start-column="64" selection-end-line="53" selection-end-column="64" />
         </state>
       </provider>
@@ -776,8 +772,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/main.dart">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="129">
-          <caret line="118" column="3" lean-forward="true" selection-start-line="118" selection-start-column="3" selection-end-line="118" selection-end-column="3" />
+        <state relative-caret-position="2106">
+          <caret line="117" column="4" selection-start-line="117" selection-start-column="4" selection-end-line="117" selection-end-column="4" />
           <folding>
             <element signature="e#0#19#0" expanded="true" />
           </folding>

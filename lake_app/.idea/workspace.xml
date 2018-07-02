@@ -32,8 +32,8 @@
       <file leaf-file-name="main.dart" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/lib/main.dart">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="18">
-              <caret line="45" column="8" selection-start-line="45" selection-start-column="8" selection-end-line="45" selection-end-column="8" />
+            <state relative-caret-position="663">
+              <caret line="76" column="6" lean-forward="true" selection-start-line="76" selection-start-column="6" selection-end-line="76" selection-end-column="6" />
             </state>
           </provider>
         </entry>
@@ -68,7 +68,7 @@
       <file leaf-file-name="basic.dart" pinned="false" current-in-tab="false">
         <entry file="file://$USER_HOME$/flutter_sdk/packages/flutter/lib/src/widgets/basic.dart">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="69012">
+            <state relative-caret-position="67950">
               <caret line="3834" selection-start-line="3834" selection-end-line="3834" />
             </state>
           </provider>
@@ -123,7 +123,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="AndroidView" />
+      <pane id="Course" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -136,8 +138,6 @@
         </subPane>
       </pane>
       <pane id="Scope" />
-      <pane id="PackagesPane" />
-      <pane id="Course" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -227,11 +227,14 @@
       <workItem from="1529922352246" duration="2965000" />
       <workItem from="1529925373717" duration="6554000" />
       <workItem from="1529977394240" duration="776000" />
+      <workItem from="1530213129610" duration="288000" />
+      <workItem from="1530432213841" duration="29000" />
+      <workItem from="1530432778352" duration="67000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="10295000" />
+    <option name="totallyTimeSpent" value="10679000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="73" y="27" width="1847" height="1053" extended-state="6" />
@@ -265,7 +268,7 @@
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24986118" />
       <window_info anchor="right" id="Theme Preview" order="3" />
       <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="right" id="Flutter Inspector" order="3" weight="0.25319266" />
+      <window_info anchor="right" id="Flutter Inspector" order="3" visible="true" weight="0.25319266" />
       <window_info anchor="bottom" id="Messages" order="7" weight="0.32934782" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -282,6 +285,153 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/lib/main.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="10" column="4" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/flutter_sdk/packages/flutter/lib/src/rendering/flex.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2556">
+          <caret line="150" column="5" selection-start-line="150" selection-start-column="5" selection-end-line="150" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/flutter_sdk/packages/flutter/lib/src/widgets/icon.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="900">
+          <caret line="59" column="15" selection-start-line="59" selection-start-column="15" selection-end-line="59" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/flutter_sdk/packages/flutter/lib/src/painting/text_style.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4734">
+          <caret line="269" column="15" selection-start-line="269" selection-start-column="15" selection-end-line="269" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/flutter_sdk/packages/flutter/lib/src/widgets/basic.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="67950">
+          <caret line="3834" selection-start-line="3834" selection-end-line="3834" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/flutter_sdk/packages/flutter/lib/src/widgets/container.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5706">
+          <caret line="325" column="16" selection-start-line="325" selection-start-column="16" selection-end-line="325" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pubspec.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="522">
+          <caret line="29" column="18" selection-start-line="29" selection-start-column="18" selection-end-line="29" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/main.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="10" column="4" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/flutter_sdk/packages/flutter/lib/src/rendering/flex.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2556">
+          <caret line="150" column="5" selection-start-line="150" selection-start-column="5" selection-end-line="150" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/flutter_sdk/packages/flutter/lib/src/widgets/icon.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="900">
+          <caret line="59" column="15" selection-start-line="59" selection-start-column="15" selection-end-line="59" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/flutter_sdk/packages/flutter/lib/src/painting/text_style.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4734">
+          <caret line="269" column="15" selection-start-line="269" selection-start-column="15" selection-end-line="269" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/flutter_sdk/packages/flutter/lib/src/widgets/basic.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="67950">
+          <caret line="3834" selection-start-line="3834" selection-end-line="3834" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/flutter_sdk/packages/flutter/lib/src/widgets/container.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5706">
+          <caret line="325" column="16" selection-start-line="325" selection-start-column="16" selection-end-line="325" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pubspec.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="522">
+          <caret line="29" column="18" selection-start-line="29" selection-start-column="18" selection-end-line="29" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/main.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="792">
+          <caret line="45" column="8" selection-start-line="45" selection-start-column="8" selection-end-line="45" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/flutter_sdk/packages/flutter/lib/src/rendering/flex.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2556">
+          <caret line="150" column="5" selection-start-line="150" selection-start-column="5" selection-end-line="150" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/flutter_sdk/packages/flutter/lib/src/widgets/icon.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="900">
+          <caret line="59" column="15" selection-start-line="59" selection-start-column="15" selection-end-line="59" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/flutter_sdk/packages/flutter/lib/src/painting/text_style.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4734">
+          <caret line="269" column="15" selection-start-line="269" selection-start-column="15" selection-end-line="269" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/flutter_sdk/packages/flutter/lib/src/widgets/basic.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="67950">
+          <caret line="3834" selection-start-line="3834" selection-end-line="3834" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/flutter_sdk/packages/flutter/lib/src/widgets/container.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5706">
+          <caret line="325" column="16" selection-start-line="325" selection-start-column="16" selection-end-line="325" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pubspec.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="522">
+          <caret line="29" column="18" selection-start-line="29" selection-start-column="18" selection-end-line="29" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/lib/main.dart">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="810">
@@ -361,7 +511,7 @@
     </entry>
     <entry file="file://$USER_HOME$/flutter_sdk/packages/flutter/lib/src/widgets/basic.dart">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="69012">
+        <state relative-caret-position="67950">
           <caret line="3834" selection-start-line="3834" selection-end-line="3834" />
         </state>
       </provider>
@@ -389,8 +539,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/main.dart">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18">
-          <caret line="45" column="8" selection-start-line="45" selection-start-column="8" selection-end-line="45" selection-end-column="8" />
+        <state relative-caret-position="663">
+          <caret line="76" column="6" lean-forward="true" selection-start-line="76" selection-start-column="6" selection-end-line="76" selection-end-column="6" />
         </state>
       </provider>
     </entry>

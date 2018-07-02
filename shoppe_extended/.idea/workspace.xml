@@ -7,8 +7,6 @@
       <change beforePath="$PROJECT_DIR$/../lake_app/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../lake_app/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../lake_app/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../lake_app/lib/main.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/item_details.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/item_details.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/main.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../startup_name_generator/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../startup_name_generator/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -21,11 +19,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="main.dart" pinned="false" current-in-tab="true">
+      <file leaf-file-name="main.dart" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/main.dart">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="324">
-              <caret line="126" column="16" lean-forward="true" selection-start-line="126" selection-start-column="16" selection-end-line="126" selection-end-column="16" />
+            <state relative-caret-position="558">
+              <caret line="121" column="29" lean-forward="true" selection-start-line="121" selection-start-column="29" selection-end-line="121" selection-end-column="29" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
               </folding>
@@ -33,7 +31,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="list.dart" pinned="false" current-in-tab="false">
+      <file leaf-file-name="list.dart" pinned="false" current-in-tab="true">
         <entry file="file://$USER_HOME$/flutter_sdk/bin/cache/pkg/sky_engine/lib/core/list.dart">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="196">
@@ -72,8 +70,8 @@
       <file leaf-file-name="item_details.dart" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/item_details.dart">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1134">
-              <caret line="63" column="41" selection-start-line="63" selection-start-column="41" selection-end-line="63" selection-end-column="41" />
+            <state relative-caret-position="450">
+              <caret line="49" column="42" lean-forward="true" selection-start-line="49" selection-start-column="42" selection-end-line="49" selection-end-column="42" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
               </folding>
@@ -135,8 +133,8 @@
       <list>
         <option value="$PROJECT_DIR$/lib/Product.dart" />
         <option value="$PROJECT_DIR$/test/widget_test.dart" />
-        <option value="$PROJECT_DIR$/lib/item_details.dart" />
         <option value="$PROJECT_DIR$/lib/main.dart" />
+        <option value="$PROJECT_DIR$/lib/item_details.dart" />
       </list>
     </option>
   </component>
@@ -285,15 +283,15 @@
       <workItem from="1530429633801" duration="10316000" />
       <workItem from="1530452497302" duration="2049000" />
       <workItem from="1530465330440" duration="738000" />
-      <workItem from="1530510679583" duration="7565000" />
+      <workItem from="1530510679583" duration="8953000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="34675000" />
+    <option name="totallyTimeSpent" value="36063000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="73" y="27" width="1847" height="1053" extended-state="7" />
+    <frame x="73" y="27" width="1847" height="1053" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
@@ -319,13 +317,13 @@
       <window_info id="Image Layers" order="2" />
       <window_info anchor="right" id="Capture Analysis" order="3" />
       <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49972236" visible="true" weight="0.32897604" />
-      <window_info anchor="bottom" id="Terminal" order="7" weight="0.32934782" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49972236" weight="0.32897604" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.32897604" />
       <window_info id="Captures" order="2" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20599666" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.20599666" />
       <window_info anchor="right" id="Theme Preview" order="3" />
       <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="right" id="Flutter Inspector" order="3" visible="true" weight="0.28039977" />
+      <window_info anchor="right" id="Flutter Inspector" order="3" weight="0.28039977" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -333,6 +331,44 @@
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Find" order="1" />
     </layout>
+    <layout-to-restore>
+      <window_info id="Designer" order="2" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="bottom" id="Dart Analysis" order="8" weight="0.32934782" />
+      <window_info id="Build Variants" order="3" side_tool="true" />
+      <window_info id="Image Layers" order="4" />
+      <window_info active="true" anchor="bottom" id="Run" order="3" sideWeight="0.49972236" visible="true" weight="0.32897604" />
+      <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" id="Flutter Inspector" order="4" visible="true" weight="0.28039977" />
+      <window_info id="Favorites" order="5" side_tool="true" />
+      <window_info id="Captures" order="6" />
+      <window_info id="Capture Tool" order="7" />
+      <window_info anchor="right" id="Capture Analysis" order="5" />
+      <window_info anchor="bottom" id="Android Profiler" order="9" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info id="UI Designer" order="8" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50027764" side_tool="true" weight="0.32934782" />
+      <window_info anchor="bottom" id="Messages" order="0" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Device File Explorer" order="6" side_tool="true" />
+      <window_info anchor="right" id="Flutter Outline" order="7" />
+      <window_info anchor="bottom" id="Logcat" order="11" />
+      <window_info anchor="bottom" id="Database Changes" order="12" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="13" />
+      <window_info anchor="right" id="Maven Projects" order="8" />
+      <window_info anchor="bottom" id="Terminal" order="14" weight="0.32934782" />
+      <window_info anchor="bottom" id="Find" order="2" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20599666" />
+      <window_info anchor="right" id="Database" order="9" />
+      <window_info anchor="bottom" id="Message" order="1" />
+      <window_info anchor="bottom" id="TODO" order="7" />
+      <window_info anchor="right" id="Palette&#9;" order="10" />
+      <window_info anchor="right" id="Theme Preview" order="11" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
+      <window_info anchor="bottom" id="Debug" order="4" weight="0.4" />
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -672,16 +708,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/item_details.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1134">
-          <caret line="63" column="41" selection-start-line="63" selection-start-column="41" selection-end-line="63" selection-end-column="41" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/flutter_sdk/packages/flutter/lib/src/widgets/binding.dart">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="196">
@@ -689,20 +715,30 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/lib/main.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="558">
+          <caret line="121" column="29" lean-forward="true" selection-start-line="121" selection-start-column="29" selection-end-line="121" selection-end-column="29" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/item_details.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="49" column="42" lean-forward="true" selection-start-line="49" selection-start-column="42" selection-end-line="49" selection-end-column="42" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$USER_HOME$/flutter_sdk/bin/cache/pkg/sky_engine/lib/core/list.dart">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="196">
           <caret line="472" column="7" selection-start-line="472" selection-start-column="7" selection-end-line="472" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/main.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="126" column="16" lean-forward="true" selection-start-line="126" selection-start-column="16" selection-end-line="126" selection-end-column="16" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
